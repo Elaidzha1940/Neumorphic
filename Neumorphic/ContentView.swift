@@ -1,6 +1,6 @@
 //  /*
 //
-//  Project: Neumorphic Design
+//  Project: Neumorphic 
 //  File: ContentView.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 02.06.2023
@@ -13,21 +13,23 @@ struct ContentView: View {
     
     @State private var selectedItem: String = ""
     
-    let textArray = ["1. Europe", "2. Asia", "3. Africa", "4. South America"]
+    let textArray = ["1. Antractica", "2. Europe", "3. Asia", "4. Africa", "5. South America"]
     
     var body: some View {
         
         ZStack {
-            Color(red: 128, green: 128, blue: 128)
+            //Color(red: 101, green: 101, blue: 101)
+            
+            Color.gray.opacity(0.5)
                 .ignoresSafeArea()
             
             RoundedRectangle(cornerRadius: 15)
+            
                 .fill(
-                    Color(red: 128, green: 128, blue: 128)                        .shadow(.inner(color:
-                                .white.opacity(0.7),
+                    Color.gray.opacity(0.5)
+                        .shadow(.inner(color: .white.opacity(0.3),
                                        radius: 5, x: -5, y: -5))
-                        .shadow(.inner(color:
-                                .gray.opacity(0.7),
+                        .shadow(.inner(color: .gray.opacity(0.3),
                                        radius: 5, x: 5, y: 5))
                 )
                 .frame(width: 300, height: 300)
@@ -37,7 +39,7 @@ struct ContentView: View {
                         ForEach(textArray.indices, id: \.self) { index in
                             HStack {
                                 Circle()
-                                    .fill(Color(red: 128, green: 128, blue: 128))
+                                    .fill(Color.gray.opacity(0.5))
                                     .frame(width: 35, height: 35)
                                     .shadow(color: .white, radius: 5, x: -5, y: -5)
                                     .shadow(color: .gray.opacity(0.5), radius: 5, x: 5, y: 5)
@@ -47,7 +49,7 @@ struct ContentView: View {
                                             if selectedItem == textArray[index] {
                                                 
                                                 Circle()
-                                                    .fill(Color(red: 128, green: 128, blue: 128))
+                                                    .fill(Color.gray.opacity(0.5))
                                                     .frame(width: 28, height: 28)
                                                     .shadow(color: .gray.opacity(0.14), radius: 1, x: -2, y: -2)
                                                     .shadow(color: .white, radius: 1, x: 1, y: 1)
@@ -55,11 +57,11 @@ struct ContentView: View {
                                             } else {
                                                 
                                                 Circle()
-                                                    .fill(Color(red: 128, green: 128, blue: 128))
+                                                    .fill(Color.gray.opacity(0.5))
                                                     .frame(width: 28, height: 28)
                                                     .shadow(color: .white, radius: 2, x: -2, y: -2)
                                                     .shadow(color: .gray.opacity(0.5), radius: 2, x: 2, y: 2)
-                                                    
+                                                
                                             }
                                         }
                                     })
