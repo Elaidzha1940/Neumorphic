@@ -27,9 +27,9 @@ struct ContentView: View {
             
                 .fill(
                     Color.gray.opacity(0.5)
-                        .shadow(.inner(color: .white.opacity(0.3),
+                        .shadow(.inner(color: .white.opacity(0.5),
                                        radius: 5, x: -5, y: -5))
-                        .shadow(.inner(color: .gray.opacity(0.3),
+                        .shadow(.inner(color: .black.opacity(0.5),
                                        radius: 5, x: 5, y: 5))
                 )
                 .frame(width: 300, height: 300)
