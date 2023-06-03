@@ -18,14 +18,12 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            Color(red: 132, green: 136, blue: 132)
+            Color(red: 128, green: 128, blue: 128)
                 .ignoresSafeArea()
             
             RoundedRectangle(cornerRadius: 15)
                 .fill(
-                    
-                    Color.blue
-                        .shadow(.inner(color:
+                    Color(red: 128, green: 128, blue: 128)                        .shadow(.inner(color:
                                 .white.opacity(0.7),
                                        radius: 5, x: -5, y: -5))
                         .shadow(.inner(color:
@@ -39,7 +37,7 @@ struct ContentView: View {
                         ForEach(textArray.indices, id: \.self) { index in
                             HStack {
                                 Circle()
-                                    .fill(Color.green.opacity(0.4))
+                                    .fill(Color(red: 128, green: 128, blue: 128))
                                     .frame(width: 35, height: 35)
                                     .shadow(color: .white, radius: 5, x: -5, y: -5)
                                     .shadow(color: .gray.opacity(0.5), radius: 5, x: 5, y: 5)
@@ -49,7 +47,7 @@ struct ContentView: View {
                                             if selectedItem == textArray[index] {
                                                 
                                                 Circle()
-                                                    .fill(Color.green.opacity(0.4))
+                                                    .fill(Color(red: 128, green: 128, blue: 128))
                                                     .frame(width: 28, height: 28)
                                                     .shadow(color: .gray.opacity(0.14), radius: 1, x: -2, y: -2)
                                                     .shadow(color: .white, radius: 1, x: 1, y: 1)
@@ -57,7 +55,7 @@ struct ContentView: View {
                                             } else {
                                                 
                                                 Circle()
-                                                    .fill(Color.green.opacity(0.4))
+                                                    .fill(Color(red: 128, green: 128, blue: 128))
                                                     .frame(width: 28, height: 28)
                                                     .shadow(color: .white, radius: 2, x: -2, y: -2)
                                                     .shadow(color: .gray.opacity(0.5), radius: 2, x: 2, y: 2)
